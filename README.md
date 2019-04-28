@@ -48,7 +48,7 @@ The code is divided into 3 main sections
   ##### create the cluster from CLI
   
   aws emr create-cluster --name "My cluster" --release-label emr-5.23.0 --applications Name=Spark \
---ec2-attributes KeyName=myKey --instance-type m4.large --instance-count 3 --use-default-roles
+--ec2-attributes KeyName=myKey --instance-type m4.large --instance-count 2 --use-default-roles
 
   
   Login to spark cluster using ssh.
