@@ -1,5 +1,4 @@
-# BD4H
-This repository will capture the work done by the team for spesis prediction using MIMIC III database as part of GeorgiaTech course
+# Sepsis Prediction
 
 ## Dependencies <br>
 * scalaVersion := "2.11.12" <br>
@@ -36,20 +35,26 @@ The code is divided into 3 main sections
    
    Note: You will be able to find the sampel data in final assignment upload. Extarct the zip and copy the contents in datafolderpath<br>
  
-  #### Run Spark code on Azure Cluster
+  #### Run Spark code on AWS Cluster
   
   Generate a JAR package with all dependencies using command *sbt assembly*  
   This will create the jar file in target\scala-2.11  folder.<br>
   
-  Upload this JAR to Azure Blob storage as well.  
-  Assuming the MIMIC data has been already uploaded to Azure Blob storage.If not please do so and you will find steps in ReadMe.docx submitted with the final project assigment
+  ##### Copy the code on to S3:
   
-  Login to spark cluster using ssh. You can use *Putty* to login<br>
+  aws s3 cp *sbt assembly jar* s3://cse6250-sepsis-data/ 
+  
+ 
+  ##### create the cluster from CLI
+  
+  aws emr create-cluster --name "My cluster" --release-label emr-5.23.0 --applications Name=Spark \
+--ec2-attributes KeyName=myKey --instance-type m4.large --instance-count 3 --use-default-roles
+
+  
+  Login to spark cluster using ssh.
    Run the command *Spark-submit –class “main class” “path to jar file” “first argument which is full path to data files”*
-   e.g. spark-submit --class "edu.gatech.cse6250.main.Main"  "wasb://xyzcontainer@xyzabcstorgaeaccount.blob.core.windows.net/BlobCodeFolderName/big-data-project-1.1.0-2.11.12.jar" "wasb://xyzcontainer@xyzabcstorageaccount.blob.core.windows.net/BlobMIMICDataFolderName/"
-   
-   *wasb* is used for accessing Azure File System <br>
-   You can see the output files under *BlobMIMICDataFolderName*.  We are using the same folder for generating output.
+   e.g. spark-submit --class "edu.gatech.cse6250.main.Main"  
+
    * Here is the list of output files generated
      * NoSepsisoutputWithSepTime.csv
      * outputWithSepTime.csv
