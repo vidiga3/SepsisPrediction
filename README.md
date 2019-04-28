@@ -7,10 +7,10 @@
 * libraryDependencies ++= Seq(<br>
   "org.apache.spark" %% "spark-core" % "2.3.0", <br>
   "org.apache.spark" %% "spark-sql" % "2.3.1",<br><br>
-  "com.databricks" %% "spark-xml" % "0.4.1",<br>
-  "com.databricks" %% "spark-csv" % "1.5.0",<br>
   "org.apache.hadoop" % "hadoop-hdfs" % "2.7.2",<br>
   "org.apache.spark" %% "spark-mllib" % "2.3.0"<br>
+   "com.databricks" %% "spark-xml" % "0.4.1",<br>
+  "com.databricks" %% "spark-csv" % "1.5.0",<br>
 )
 
 -----
@@ -26,7 +26,7 @@ The code is divided into 3 main sections
   * executes code to idenfity the sepsis date for patients who are identified with angus criteria of sepsis
   * executes code to find the date of final record of patients with non sepsis
   * executes code to filter data to extract information of blood vitals (heart rate, manual BP, Oxygen saturation,blood Temperature
-  * extracts 20 topics from the patient notes and saves distribution of those 20 topics for each patient
+  * LDA: extracts 20 topics from the patient notes and saves distribution of those 20 topics for each patient
  
   #### Run Spark code on Docker VM
    You can use the docker VM shared with the Homework assigments to run our Spark Code with sample Data.<br>   
