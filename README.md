@@ -7,7 +7,20 @@
 
 ## Approach
 
+Run LDA on the Notes to extract features (topic distribution for each patient). These features are the representation of patients. Use this representation to cluster patients and model each cluster separately.
+Blood vital features are extracted from the mimic database. <br>
+
 ![Approach](https://github.com/vidiga3/SepsisPrediction/blob/master/Approach.png)
+
+## Experimental results
+
+![ExperimentalResults](https://github.com/vidiga3/SepsisPrediction/blob/master/ExperimentResults.png)
+
+## Confusion Matrix
+![confusionMatrix](https://github.com/vidiga3/SepsisPrediction/blob/master/ConfusionMatrix.png)
+
+
+
 
 
 ## Dependencies <br>
