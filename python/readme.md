@@ -9,7 +9,8 @@
 * Notebooks - notebook files to extract the stats from blood vitals
 
 # Run Models
-* Execute Every cell of Cse6250 with Note FeaturesFinal.ipynb <br>
+* execute CSE6250_ExtractBlood Vital  Features to extract blood vital features <br>
+* execute  Final Clustering and Modelling notebook.ipynb to cluster (Kmeans), merge all features and run models
 Generates Following for CNN, RNN, Logistic regression with and With out note features
   * Generates ROC curves
   * Accuracy table
