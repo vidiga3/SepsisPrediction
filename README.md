@@ -2,11 +2,12 @@
 
 ## Architecture
 
-![Architecture](https://github.com/vidiga3/SepsisPrediction/Approach.png)
+![Architecture](https://github.com/vidiga3/SepsisPrediction/blob/master/Architecture.png)
 
 
 ## Approach
 
+![Approach] (https://github.com/vidiga3/SepsisPrediction/blob/master/Approach.png)
 
 
 ## Dependencies <br>
