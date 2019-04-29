@@ -57,6 +57,35 @@ The code is divided into 3 main sections
    *sbt compile “run datafolderpath”* where *datafolderpath* is the path where sample data is kept <br>
    
    Note: You will be able to find the sampel data in final assignment upload. Extarct the zip and copy the contents in datafolderpath<br>
+   
+   #### set up spark cluster
+   
+   I have used the following Amazon services S3, EC2 and EMR.
+
+•	Setting up the storage on Amazon S3
+•	Setting up the EMR service to run spark jobs
+•	EC2 to set up cluster to run the spark job
+
+![AWServices](https://github.com/vidiga3/SepsisPrediction/blob/master/SparkServices.png)
+
+Setting up Amazon S3 storage
+
+We need S3 for two reasons: 
+(1) An EMR workflow requires the input data to be on S3
+(2) An EMR workflow output is always saved to S3
+
+![S3](https://github.com/vidiga3/SepsisPrediction/blob/master/S3.png)
+![S3Added](https://github.com/vidiga3/SepsisPrediction/blob/master/S3Added.png)
+
+ ##### Analytics (EMR)
+
+ Create a EMR cluster to run spark jobs <br>
+
+![EMR](https://github.com/vidiga3/SepsisPrediction/blob/master/EMR.png)
+
+Master :  1 instance, 4 vCore, 8 GB memory and EBS storage <br>
+Core :  2 Instances,  4 vCore, 8 GB memory and EBS storage <br>
+
  
   #### Run Spark code on AWS Cluster
   
