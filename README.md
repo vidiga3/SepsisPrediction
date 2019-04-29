@@ -1,5 +1,14 @@
 # Sepsis Prediction
 
+## Architecture
+
+![Architecture](https://github.com/vidiga3/SepsisPrediction/Approach.png)
+
+
+## Approach
+
+
+
 ## Dependencies <br>
 * scalaVersion := "2.11.12" <br>
  
