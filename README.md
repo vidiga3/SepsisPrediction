@@ -7,7 +7,7 @@
 
 ## Approach
 
-![Approach] (https://github.com/vidiga3/SepsisPrediction/blob/master/Approach.png)
+![Approach](https://github.com/vidiga3/SepsisPrediction/blob/master/Approach.png)
 
 
 ## Dependencies <br>
